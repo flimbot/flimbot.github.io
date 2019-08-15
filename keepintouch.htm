@@ -1,0 +1,59 @@
+
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145742901-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-145742901-1');
+		</script>
+
+	
+	
+		<title>flimbot.github.io</title>
+		<script>
+			var contactInfo = {
+				'Facebook': {
+					'url': '',
+					'fontawesome': '',
+					'comment': ''
+				},
+				'Twitter': {
+					'url': '',
+					'fontawesome': '',
+					'comment': ''
+				},
+			
+			}
+		
+			if(window.location.search) {
+				console.log('decoded:' + decode(window.location.search.substr(1)))
+			}
+			
+			function encode(strIn) {
+				let t=atob(strIn),s=''
+				for(let i=0 ; i < t.length ; i++) { 
+					s+=String(t.charCodeAt(i)).padStart(4,'0')
+				}
+				return s;
+			}
+			function decode(strIn) {
+				let t=''
+				for(let i=0 ; i < (strIn.length / 4) ; i++) {
+					t+=String.fromCharCode(parseInt(strIn.substr(i*4,4)))
+				}
+				return btoa(t)
+			}
+		</script>
+		<style>	
+			body {background-image: linear-gradient( #3e6a94 60%, #103152 );} 
+		</style>
+	</head>
+	<body>
+		<div id='filter' ></div>
+		<div id='results'></div>
+	</body>
+</html>
