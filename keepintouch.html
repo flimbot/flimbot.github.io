@@ -29,8 +29,8 @@
 			
 			}
 		
-			if(window.location.search) {
-				console.log('decoded:' + decode(window.location.search.substr(1)))
+			if(window.location.search && ga) {
+				ga('send', 'event', 'page', 'loadfromcomms', decode(window.location.search.substr(1)));
 			}
 			
 			function encode(strIn) {
